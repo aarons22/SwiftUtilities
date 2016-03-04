@@ -1,17 +1,18 @@
 {
   "name": "SwiftUtilities",
   "version": "0.1.0",
-  "summary": "A short description of SwiftUtilities.",
-  "description": "",
-  "homepage": "https://github.com/<GITHUB_USERNAME>/SwiftUtilities",
+  "summary": "A toolbelt of utilities for Swift.",
+  "description": "Boilerplate code that I've been copying from project to project",
+  "homepage": "https://github.com/aarons22/SwiftUtilities",
   "license": "MIT",
   "authors": {
-    "Aaron Sapp": "asapp@kinetic-vision.com"
+    "Aaron Sapp": "sapp.aaron@gmail.com"
   },
   "source": {
-    "git": "https://github.com/<GITHUB_USERNAME>/SwiftUtilities.git",
+    "git": "https://github.com/aarons22/SwiftUtilities.git",
     "tag": "0.1.0"
   },
+  "social_media_url": "https://twitter.com/aaronsapp",
   "platforms": {
     "ios": "8.0"
   },

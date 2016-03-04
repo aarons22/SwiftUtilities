@@ -22,7 +22,7 @@ pod "SwiftUtilities"
 
 ## Author
 
-Aaron Sapp, asapp@kinetic-vision.com
+Aaron Sapp, sapp.aaron@gmail.com
 
 ## License
 

@@ -7,9 +7,19 @@
 //
 
 import UIKit
+import SwiftUtilities
 
 class ViewController: UIViewController {
-
+    @IBOutlet var testView:UIView!
+    
+    @IBOutlet var setXTextView:UITextField!
+    
+    @IBAction func setXValue(sender: UIButton) {
+        if let n = NSNumberFormatter().numberFromString(setXTextView.text!) {
+            self.testView.setX(CGFloat(n))
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
