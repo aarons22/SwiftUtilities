@@ -1,0 +1,25 @@
+{
+  "name": "SwiftUtilities",
+  "version": "0.1.0",
+  "summary": "A short description of SwiftUtilities.",
+  "description": "",
+  "homepage": "https://github.com/<GITHUB_USERNAME>/SwiftUtilities",
+  "license": "MIT",
+  "authors": {
+    "Aaron Sapp": "asapp@kinetic-vision.com"
+  },
+  "source": {
+    "git": "https://github.com/<GITHUB_USERNAME>/SwiftUtilities.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "requires_arc": true,
+  "source_files": "Pod/Classes/**/*",
+  "resource_bundles": {
+    "SwiftUtilities": [
+      "Pod/Assets/*.png"
+    ]
+  }
+}
