@@ -13,16 +13,16 @@ class GradientView: UIView {
     @IBInspectable var startColor: UIColor = UIColor.init(white: 0, alpha: 0.8)
     @IBInspectable var endColor: UIColor = UIColor.clearColor()
     
-    override public func awakeFromNib() {
+    override func awakeFromNib() {
         super.awakeFromNib()
         setup()
     }
-    override public func prepareForInterfaceBuilder() {
+    override func prepareForInterfaceBuilder() {
         super.prepareForInterfaceBuilder()
         setup()
     }
     
-    public func setup() {
+    func setup() {
         let gradient = CAGradientLayer.init()
         gradient.frame = self.frame
         gradient.colors = [startColor.CGColor, endColor.CGColor]
