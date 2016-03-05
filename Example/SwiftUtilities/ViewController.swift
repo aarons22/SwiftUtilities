@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     
     @IBAction func setXValue(sender: UIButton) {
         if let n = NSNumberFormatter().numberFromString(setXTextView.text!) {
-            self.testView.setX(CGFloat(n))
+            self.testView.x = CGFloat(n)
         }
     }
     

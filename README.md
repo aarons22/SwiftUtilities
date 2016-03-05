@@ -14,9 +14,10 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 ## Installation
 
 SwiftUtilities is available through [CocoaPods](http://cocoapods.org). To install
-it, simply add the following line to your Podfile:
+it, simply add the following lines to your Podfile (pod is currently not published so you will need to include my podspec):
 
 ```ruby
+source 'https://github.com/aarons22/PodSpecs.git'
 pod "SwiftUtilities"
 ```
 

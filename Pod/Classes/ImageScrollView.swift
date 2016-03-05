@@ -14,9 +14,8 @@ class ImagePageControlView: UIScrollView, UIScrollViewDelegate {
     var pageControl:UIPageControl!
     var imageContentMode: UIViewContentMode = .ScaleAspectFit
     
-    /// Setup the image scrollview. Note: Always call in viewDidLayoutSubviews() if using Autolayout
+    /// Setup the image scrollview. Note: Always call this in viewDidLayoutSubviews() if using Autolayout
     func setup() {
-        
         self.pagingEnabled = true
         self.delegate = self
         
@@ -25,10 +24,7 @@ class ImagePageControlView: UIScrollView, UIScrollViewDelegate {
     }
     
     func configureScrollView() {
-        
         var runningX: CGFloat = 0
-        let width = self.frame.size.width // imageScrollView width isn't updated by constraints yet
-        let height = self.frame.size.height
         
         // Because we're calling this in viewDidLayoutSubviews(), it's getting called multiple times
         // so we need to clear out the previous subviews in favor of the more accurate ones
@@ -43,18 +39,17 @@ class ImagePageControlView: UIScrollView, UIScrollViewDelegate {
         for image in images {
             let imageView = UIImageView.init(image: image)
             imageView.contentMode = imageContentMode
-            imageView.frame = CGRectMake(runningX, 0, width, height)
-            runningX += width
+            imageView.frame = CGRectMake(runningX, 0, self.width, self.height)
+            runningX += self.width
             
             self.addSubview(imageView)
         }
         
-        self.contentSize = CGSizeMake(runningX, height)
+        self.contentSize = CGSizeMake(runningX, self.height)
     }
     
     func configurePageControl() {
-        
-        pageControl = UIPageControl.init(frame: CGRectMake(0, self.frame.size.height - 50, self.frame.size.width, 50))
+        pageControl = UIPageControl.init(frame: CGRectMake(0, self.height - 50, self.width, 50))
         pageControl.numberOfPages = images.count
         pageControl.currentPage = 0
         pageControl.addTarget(self, action: Selector("changePage:"), forControlEvents: .ValueChanged)

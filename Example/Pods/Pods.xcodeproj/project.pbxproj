@@ -77,6 +77,8 @@
 		9BD99F97E6F2B3811B56343F3505577C /* World+DSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDDE1B04A94712F4D2883C80EE62D96 /* World+DSL.swift */; };
 		9E7786C034F0E0A6B5F0A0E6BE7D7E4A /* BeEmpty.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2764775E2D6E934DD52F0446CA03DF /* BeEmpty.swift */; };
 		A80769C99C01B5415FB8EA544903CE1E /* World.h in Headers */ = {isa = PBXBuildFile; fileRef = 6DEB112A26C5C33C8B8F619999E196CF /* World.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		A83002141C8B79400092AC45 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83002131C8B79400092AC45 /* String+Extensions.swift */; };
+		A83002161C8B79C70092AC45 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83002151C8B79C70092AC45 /* GradientView.swift */; };
 		AA8501741ABB8D75C6C47DE086BACD37 /* FBSnapshotTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A5998B34EE4429FE9C07DFC94F0ABB4 /* FBSnapshotTestController.m */; };
 		AC035703A5A6D4B4A99CF3A3C25A9EC4 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C36DB6F05615EC71278526272A72BAD /* Quick.framework */; };
 		AD4D905241DED4AEAD67447088ACB23D /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 899697610CD89ABF71B0C316A2B370ED /* XCTest.framework */; };
@@ -291,6 +293,8 @@
 		9EEC4AE3D10F56B3279410A932A7BA59 /* QuickSpec.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QuickSpec.h; path = Quick/QuickSpec.h; sourceTree = "<group>"; };
 		A14E97EFA39EE5B8E0791218121044BD /* FailureMessage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FailureMessage.swift; path = Nimble/FailureMessage.swift; sourceTree = "<group>"; };
 		A3156D3DD64E756925ECB3AC6AF45031 /* Pods-SwiftUtilities_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SwiftUtilities_Example-dummy.m"; sourceTree = "<group>"; };
+		A83002131C8B79400092AC45 /* String+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		A83002151C8B79C70092AC45 /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		A8310C1864A59F16FDE29B8921A9584D /* Pods-SwiftUtilities_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwiftUtilities_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		AA329B2CFA87E526DA6452FDD6BB26BC /* Poll.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Poll.swift; path = Nimble/Utils/Poll.swift; sourceTree = "<group>"; };
 		ACB4C9E009BF21741AB0A3E52D7E8655 /* SwiftSupport.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftSupport.swift; path = FBSnapshotTestCase/SwiftSupport.swift; sourceTree = "<group>"; };
@@ -657,6 +661,8 @@
 				3F7065EEDE7107ECB446E5483D7C7CDE /* ImageScrollView.swift */,
 				F476A54C71E138137872A7BCFB679FBD /* ScrollViewController.swift */,
 				48FC7CB233F75B0DF1D81EB876767095 /* UIView+Extensions.swift */,
+				A83002131C8B79400092AC45 /* String+Extensions.swift */,
+				A83002151C8B79C70092AC45 /* GradientView.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -1054,8 +1060,10 @@
 			files = (
 				CC2BD0A04199B280AD93F459968CAFC2 /* FBSnapshotTestCase-dummy.m in Sources */,
 				35848D70EAC9237246BDF63457729694 /* FBSnapshotTestCase.m in Sources */,
+				A83002161C8B79C70092AC45 /* GradientView.swift in Sources */,
 				5D14695A69EC4A8DF7488D0FC59C105C /* FBSnapshotTestCasePlatform.m in Sources */,
 				AA8501741ABB8D75C6C47DE086BACD37 /* FBSnapshotTestController.m in Sources */,
+				A83002141C8B79400092AC45 /* String+Extensions.swift in Sources */,
 				52F7A46AB0053D8BB1D793B917D37BB2 /* SwiftSupport.swift in Sources */,
 				788E3D9458FE9540469981BE9A0B227C /* UIImage+Compare.m in Sources */,
 				163C6E8E5E7CEE1E0BEEB9CA0939DA3A /* UIImage+Diff.m in Sources */,
