@@ -8,14 +8,14 @@
 
 import UIKit
 
-class ImagePageControlView: UIScrollView, UIScrollViewDelegate {
+public class ImagePageControlView: UIScrollView, UIScrollViewDelegate {
     
     var images = [UIImage]()
     var pageControl:UIPageControl!
     var imageContentMode: UIViewContentMode = .ScaleAspectFit
     
     /// Setup the image scrollview. Note: Always call this in viewDidLayoutSubviews() if using Autolayout
-    func setup() {
+    public func setup() {
         self.pagingEnabled = true
         self.delegate = self
         
@@ -67,7 +67,7 @@ class ImagePageControlView: UIScrollView, UIScrollViewDelegate {
     
     // MARK: UIScrollViewDelegate
     
-    func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
+    public func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
         let pageNumber = round(scrollView.contentOffset.x / scrollView.frame.size.width)
         pageControl.currentPage = Int(pageNumber)
     }

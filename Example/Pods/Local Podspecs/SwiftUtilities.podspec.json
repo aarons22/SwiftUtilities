@@ -1,6 +1,6 @@
 {
   "name": "SwiftUtilities",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "summary": "A toolbelt of utilities for Swift.",
   "description": "Boilerplate code that I've been copying from project to project",
   "homepage": "https://github.com/aarons22/SwiftUtilities",
@@ -10,7 +10,7 @@
   },
   "source": {
     "git": "https://github.com/aarons22/SwiftUtilities.git",
-    "tag": "0.1.1"
+    "tag": "0.1.2"
   },
   "social_media_url": "https://twitter.com/aaronsapp",
   "platforms": {

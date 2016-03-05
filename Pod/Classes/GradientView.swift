@@ -9,15 +9,15 @@
 import Foundation
 
 @IBDesignable
-class GradientView: UIView {
+public class GradientView: UIView {
     @IBInspectable var startColor: UIColor = UIColor.init(white: 0, alpha: 0.8)
     @IBInspectable var endColor: UIColor = UIColor.clearColor()
     
-    override func awakeFromNib() {
+    override public func awakeFromNib() {
         super.awakeFromNib()
         setup()
     }
-    override func prepareForInterfaceBuilder() {
+    override public func prepareForInterfaceBuilder() {
         super.prepareForInterfaceBuilder()
         setup()
     }
