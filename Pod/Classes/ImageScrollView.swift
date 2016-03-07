@@ -8,11 +8,11 @@
 
 import UIKit
 
-public class ImagePageControlView: UIScrollView, UIScrollViewDelegate {
+public class ImageScrollView: UIScrollView, UIScrollViewDelegate {
     
-    var images = [UIImage]()
+    public var images = [UIImage]()
+    public var imageContentMode: UIViewContentMode = .ScaleAspectFit
     var pageControl:UIPageControl!
-    var imageContentMode: UIViewContentMode = .ScaleAspectFit
     
     /// Setup the image scrollview. Note: Always call this in viewDidLayoutSubviews() if using Autolayout
     public func setup() {
