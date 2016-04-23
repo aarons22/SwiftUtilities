@@ -8,14 +8,14 @@
 
 Pod::Spec.new do |s|
   s.name             = "SwiftUtilities"
-  s.version          = "0.1.3"
+  s.version          = "0.1.4"
   s.summary          = "A toolbelt of utilities for Swift."
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
 #   * Try to keep it short, snappy and to the point.
 #   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!  
+#   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description      = "Boilerplate code that I've been copying from project to project"
 
   s.homepage         = "https://github.com/aarons22/SwiftUtilities"
