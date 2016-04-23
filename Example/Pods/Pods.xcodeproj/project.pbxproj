@@ -78,6 +78,8 @@
 		9BD99F97E6F2B3811B56343F3505577C /* World+DSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDDE1B04A94712F4D2883C80EE62D96 /* World+DSL.swift */; };
 		9E7786C034F0E0A6B5F0A0E6BE7D7E4A /* BeEmpty.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2764775E2D6E934DD52F0446CA03DF /* BeEmpty.swift */; };
 		A80769C99C01B5415FB8EA544903CE1E /* World.h in Headers */ = {isa = PBXBuildFile; fileRef = 6DEB112A26C5C33C8B8F619999E196CF /* World.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		A8405C9F1CB98CA40003F5AD /* UIScrollView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8405C9D1CB98B790003F5AD /* UIScrollView+Extensions.swift */; };
+		A84B055B1CCBB711002AFD60 /* UIGestureRecognizer+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84B055A1CCBB711002AFD60 /* UIGestureRecognizer+Extensions.swift */; };
 		AA8501741ABB8D75C6C47DE086BACD37 /* FBSnapshotTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A5998B34EE4429FE9C07DFC94F0ABB4 /* FBSnapshotTestController.m */; };
 		AC035703A5A6D4B4A99CF3A3C25A9EC4 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C36DB6F05615EC71278526272A72BAD /* Quick.framework */; };
 		AD4D905241DED4AEAD67447088ACB23D /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 899697610CD89ABF71B0C316A2B370ED /* XCTest.framework */; };
@@ -294,6 +296,8 @@
 		A3156D3DD64E756925ECB3AC6AF45031 /* Pods-SwiftUtilities_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SwiftUtilities_Example-dummy.m"; sourceTree = "<group>"; };
 		A7D98D55E2F0DD0B9E682AB15F8A759F /* ScrollViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ScrollViewController.swift; sourceTree = "<group>"; };
 		A8310C1864A59F16FDE29B8921A9584D /* Pods-SwiftUtilities_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwiftUtilities_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		A8405C9D1CB98B790003F5AD /* UIScrollView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Extensions.swift"; sourceTree = "<group>"; };
+		A84B055A1CCBB711002AFD60 /* UIGestureRecognizer+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIGestureRecognizer+Extensions.swift"; sourceTree = "<group>"; };
 		AA329B2CFA87E526DA6452FDD6BB26BC /* Poll.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Poll.swift; path = Nimble/Utils/Poll.swift; sourceTree = "<group>"; };
 		ACB4C9E009BF21741AB0A3E52D7E8655 /* SwiftSupport.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftSupport.swift; path = FBSnapshotTestCase/SwiftSupport.swift; sourceTree = "<group>"; };
 		ADFAAE8176424D7F58734081BE199303 /* SwiftUtilities-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftUtilities-umbrella.h"; sourceTree = "<group>"; };
@@ -683,6 +687,8 @@
 				A7D98D55E2F0DD0B9E682AB15F8A759F /* ScrollViewController.swift */,
 				EF254807B9B0EB75B53958C7E169492B /* String+Extensions.swift */,
 				DDBF1914D7053787F881B0A77EC657FB /* UIView+Extensions.swift */,
+				A8405C9D1CB98B790003F5AD /* UIScrollView+Extensions.swift */,
+				A84B055A1CCBB711002AFD60 /* UIGestureRecognizer+Extensions.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -1058,6 +1064,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A84B055B1CCBB711002AFD60 /* UIGestureRecognizer+Extensions.swift in Sources */,
 				CC2BD0A04199B280AD93F459968CAFC2 /* FBSnapshotTestCase-dummy.m in Sources */,
 				35848D70EAC9237246BDF63457729694 /* FBSnapshotTestCase.m in Sources */,
 				5D14695A69EC4A8DF7488D0FC59C105C /* FBSnapshotTestCasePlatform.m in Sources */,
@@ -1129,6 +1136,7 @@
 				9B0DCE2573B13F22701861AB285EAF68 /* String+Extensions.swift in Sources */,
 				B62AF481AF84DEE6A77F9532807EAB7F /* SwiftUtilities-dummy.m in Sources */,
 				FEE06527360D3108B0B6C2E6EB9046CB /* UIView+Extensions.swift in Sources */,
+				A8405C9F1CB98CA40003F5AD /* UIScrollView+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

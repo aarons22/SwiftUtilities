@@ -52,7 +52,7 @@ public class ImageScrollView: UIScrollView, UIScrollViewDelegate {
         pageControl = UIPageControl.init(frame: CGRectMake(0, self.height - 50, self.width, 50))
         pageControl.numberOfPages = images.count
         pageControl.currentPage = 0
-        pageControl.addTarget(self, action: Selector("changePage:"), forControlEvents: .ValueChanged)
+        pageControl.addTarget(self, action: #selector(ImageScrollView.changePage(_:)), forControlEvents: .ValueChanged)
         
         self.superview?.addSubview(pageControl)
         if images.count == 1 {

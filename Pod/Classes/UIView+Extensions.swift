@@ -10,9 +10,45 @@ import UIKit
 
 extension UIView {
     
+    public func addKeyBoardToView(tapDismiss: Bool) {
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(UIScrollView.keyboardWasShown(_:)), name: UIKeyboardWillShowNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(UIScrollView.keyboardWillBeHidden(_:)), name: UIKeyboardWillHideNotification, object: nil)
+        
+        if tapDismiss {
+            let singleTap = UITapGestureRecognizer.init(target: self, action: #selector(UIView.endEditing(_:)))
+            self.addGestureRecognizer(singleTap)
+        }
+    }
+    
+    public func removeKeyboardFromFromView() {
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: UIKeyboardWillShowNotification, object: nil)
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: UIKeyboardWillHideNotification, object: nil)
+    }
+    
+    func keyboardWasShown(notification: NSNotification) {
+        let info = notification.userInfo
+        
+        let animationDuration = info![UIKeyboardAnimationDurationUserInfoKey]?.doubleValue
+//        let animationCurve:UIViewAnimationCurve = info![UIKeyboardAnimationCurveUserInfoKey]?.intValue
+        
+        let keyboardSize = info![UIKeyboardFrameBeginUserInfoKey]?.CGRectValue().size
+        let offset = self.window!.frame.size.height - self.height - self.y
+        
+        if animationDuration != nil && false {
+//            UIView.animateWithDuration(animationDuration!, delay: 0.0, options: (animationCurve << 16), animations: {
+//                
+//                }, completion: nil)
+        } else {
+            self.y = self.y - keyboardSize!.height + offset
+        }
+    }
+    
+    func keyboardWillBeHidden(notification: NSNotification) {
+        
+    }
     /// Screenshot of current view
     public func screenshot() -> UIImage {
-        if UIScreen.mainScreen().respondsToSelector(Selector("scale")) {
+        if UIScreen.mainScreen().respondsToSelector(#selector(NSDecimalNumberBehaviors.scale)) {
             UIGraphicsBeginImageContextWithOptions(self.bounds.size, false, UIScreen.mainScreen().scale)
         } else {
             UIGraphicsBeginImageContext(self.bounds.size)
@@ -22,6 +58,13 @@ extension UIView {
         let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         return image
+    }
+    /// Add radius to specific (or all) corners
+    public func roundCorners(corners:UIRectCorner, radius: CGFloat) {
+        let path = UIBezierPath(roundedRect: self.bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
+        let mask = CAShapeLayer()
+        mask.path = path.CGPath
+        self.layer.mask = mask
     }
     
     // Additional UIView properties (also accessible via storyboards)
