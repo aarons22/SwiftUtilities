@@ -1,11 +1,13 @@
 source 'https://github.com/CocoaPods/Specs.git'
 use_frameworks!
 
-target 'SwiftUtilities_Example', :exclusive => true do
+pod 'HanekeSwift', '0.10.1'
+
+target 'SwiftUtilities_Example' do
   pod 'SwiftUtilities', :path => '../'
 end
 
-target 'SwiftUtilities_Tests', :exclusive => true do
+target 'SwiftUtilities_Tests' do
   pod 'SwiftUtilities', :path => '../'
 
   pod 'Quick', '~> 0.8.0'

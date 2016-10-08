@@ -8,7 +8,7 @@
 
 import Foundation
 
-@IBDesignable
+//@IBDesignable
 public class GradientView: UIView {
     @IBInspectable var startColor: UIColor = UIColor.init(white: 0, alpha: 0.8)
     @IBInspectable var endColor: UIColor = UIColor.clearColor()

@@ -7,10 +7,16 @@
 //
 
 import UIKit
+import Haneke
+
+enum ImageError : ErrorType {
+    case InvalidFormat
+}
 
 public class ImageScrollView: UIScrollView, UIScrollViewDelegate {
     
-    public var images = [UIImage]()
+    /// provide an array of UIImages or NSURLs
+    public var images = [AnyObject]()
     public var imageContentMode: UIViewContentMode = .ScaleAspectFit
     var pageControl:UIPageControl!
     
@@ -23,7 +29,7 @@ public class ImageScrollView: UIScrollView, UIScrollViewDelegate {
         configurePageControl()
     }
     
-    func configureScrollView() {
+    func configureScrollView(){
         var runningX: CGFloat = 0
         
         // Because we're calling this in viewDidLayoutSubviews(), it's getting called multiple times
@@ -35,16 +41,23 @@ public class ImageScrollView: UIScrollView, UIScrollViewDelegate {
             pageControl.removeFromSuperview()
         }
         
-        // Add images into the scrollview content area
         for image in images {
-            let imageView = UIImageView.init(image: image)
+            let imageView = UIImageView.init(frame: CGRectMake(runningX, 0, self.width, self.height))
+            
             imageView.contentMode = imageContentMode
-            imageView.frame = CGRectMake(runningX, 0, self.width, self.height)
+            if image.isKindOfClass(UIImage) {
+                imageView.image = image as! UIImage
+            } else if image.isKindOfClass(NSURL) {
+                imageView.hnk_setImageFromURL(image as! NSURL)
+            }
+            else {
+                print("WARNING (ImageScrollView): \(NSStringFromClass(image.classForCoder)) is not supported (only UIImage, NSURL)")
+            }
+            
             runningX += self.width
             
             self.addSubview(imageView)
         }
-        
         self.contentSize = CGSizeMake(runningX, self.height)
     }
     
